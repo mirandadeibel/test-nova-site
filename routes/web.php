@@ -17,4 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/movies-by-director/{director}', [ \App\Http\Controllers\MoviesController::class, 'getMoviesByDirector' ]);
+Route::get('/movies-by-director/{director}', [ \App\Http\Controllers\MoviesController::class, 'getMoviesByDirector' ])
+    ->name('movies-by-director');
